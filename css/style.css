@@ -80,7 +80,24 @@
     padding: 10px 20px; 
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
 
+.hamburger span {
+    width: 25px;
+    height: 4px;
+    background-color:aqua;
+    color: white;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
 
 .main {
     padding: 20px;
@@ -93,7 +110,7 @@
 }
 
 .carousel-inner img {
-    width: 100%; /*ancho*/
+    width: 100%;
     height: auto;
 }
 
@@ -337,25 +354,44 @@ footer li a{
         justify-content: center;
     }
 
-    /* Ajustes adicionales para Misión y Visión */
+    .hamburger {
+        display: none; /* Está oculto en pantallas grandes */
+        cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+        width: 40px; /* Tamaño más grande */
+        height: 30px; /* Tamaño más grande */
+        position: relative; /* Para posicionar las barras dentro del botón */
+        background: transparent; /* Sin fondo */
+        border: none; /* Sin borde */
+        flex-direction: column; /* Asegura que las barras estén en columna */
+        justify-content: space-between; /* Espacio entre las barras */
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%; /* Asegura que las barras ocupen todo el ancho del botón */
+        height: 5px; /* Tamaño más grande de las barras */
+        background-color:aqua; /* Color de las barras */
+        border-radius: 5px; /* Bordes redondeados */
+        transition: all 0.3s; /* Animación suave */
+    }
+
     .mision-vision {
-        flex-direction: column;  /* Hace que los items de Misión y Visión se apilen verticalmente */
+        flex-direction: column;  
         align-items: center;
     }
 
     .mision-vision .item {
-        width: 80%;  /* Aumenta el tamaño de los elementos de Misión y Visión en pantallas pequeñas */
+        width: 80%;  
         margin-bottom: 20px;
     }
     
-
     .footer {
-        flex-direction: column;  /* Pone los elementos del footer en una columna */
+        flex-direction: column; 
         align-items: center;
     }
 
     footer article {
-        width: 80%;  /* Aumenta el tamaño de los artículos en el footer */
+        width: 80%;  
         margin-bottom: 20px;
     }
 
@@ -364,7 +400,7 @@ footer li a{
     }
 
     footer li a {
-        font-size: 25px;  /* Aumenta el tamaño de los enlaces en el footer */
+        font-size: 25px; 
     }
 
     .footer .contacto li{
@@ -380,10 +416,51 @@ footer li a{
     }
 }
 
-
-
 @media (max-width: 1000px) {
     .servicios .tarjeta {
         width: 100%; 
     }
+}
+
+/* Ocultar los enlaces del menú y mostrar solo el botón hamburguesa en pantallas pequeñas */
+@media screen and (max-width: 954px) {
+    #menu {
+        display: none; /* El menú estará oculto por defecto */
+        flex-direction: column; /* Asegura que los items se apilen verticalmente */
+        margin-top: 10px;
+    }
+
+    #menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: flex; /* Muestra el botón hamburguesa */
+        width: 50px; /* Ajusta el tamaño del botón */
+        height: 40px; /* Ajusta el tamaño del botón */
+        gap: 8px; /* Aumenta el espacio entre las barras */
+    }
+    .hamburger span {
+        height: 8px; /* Aumenta el grosor de las barras */
+    }
+
+    .hidden {
+        display: none; /* Mantén la clase hidden para ocultar el menú */
+    }
+
+    #menu.show {
+        display: flex; /* Cuando el botón se haga clic, se muestra el menú */
+    }
+
+/* En pantallas grandes, se muestra el menú de forma normal */
+@media screen and (min-width: 954px) {
+    #menu {
+        display: flex; /* El menú es visible por defecto */
+    }
+
+    .hamburger {
+        display: none; /* Oculta el botón hamburguesa en pantallas grandes */
+    }
+}
 }
