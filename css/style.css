@@ -1,0 +1,389 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+    background-image: url(/assets/img/fondo2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    background-color: #000000b7;
+    padding: 10px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.navegacion {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.navegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+}
+
+.navegacion li {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navegacion li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease; 
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 6px; 
+    padding: 5px 10px; 
+}
+
+.navegacion li a svg {
+    height: 4vh;
+    width: auto;
+    padding-bottom: 7px; 
+}
+
+.navegacion li a:hover {
+    color: white;
+    background-color: rgb(3, 194, 194);
+    padding: 10px 20px; 
+}
+
+
+
+.main {
+    padding: 20px;
+}
+
+.Carrusel {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.carousel-inner img {
+    width: 100%; /*ancho*/
+    height: auto;
+}
+
+.mision-vision {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 0 30px;
+    color: white;
+}
+
+.mision-vision .item {
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    gap: 20px;
+    background-color:#000000b7;
+    border-radius: 20px;
+}
+
+.mision-vision .item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.mision-vision .item h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: aqua;
+}
+
+.mision-vision .item p {
+    font-size: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.servicios {
+    background-color: #000000b7;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.servicios .container {
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    gap: 20px;              
+    text-align: center;   
+}
+
+.servicios h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: aqua;
+}
+
+.servicios .contenedor-tarjetas {
+    display: flex;          
+    align-items: center;    
+    justify-content: center;
+    flex-wrap: wrap;        
+    gap: 50px;             
+}
+
+
+.servicios .tarjeta {
+    background-color: #1a1a1ab7;
+    color: white;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicios .tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.servicios .tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.servicios .tarjeta .contenido {
+    padding: 15px;
+}
+
+.servicios .tarjeta .titulo {
+    font-size: 27px;
+    color: aqua;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.servicios .tarjeta .descripcion {
+    font-size: 20px;
+    color: white;
+    text-align:justify;
+}
+
+.footer {
+    display: flex;
+    justify-content:center;
+    background-color: #000000;
+    color: white;
+    padding: 25px 5px 20px 5px;
+    gap: 50px;
+}
+
+footer article {
+    width: 30%;
+}
+
+footer h3 {
+    gap: 50px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: aqua;
+    text-align: center;
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer li{
+    color: white;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+footer li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+    text-align: center;
+    transition: background-color 0.5s;
+    transition: padding 0.5s;
+    border-radius: 100px;
+    gap: 0 10px;
+
+    svg{height: 6vh; width: auto;
+    padding-bottom: 4px;}
+}
+
+
+.footer .contacto li{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 0 10px;
+    svg{height: 5vh; width: auto;
+        padding-bottom: 4px;}
+}
+
+.footer li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.footer a:hover{
+    padding: 10px 1px 10px 1px;
+    background-color: rgb(3, 194, 194);
+}
+
+
+.geolocalizacion iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.geolocalizacion div {
+    position: relative;
+    padding-bottom: 56%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.geolocalizacion iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 953px) {
+
+    .nav {
+        flex-direction: column;  
+        align-items: center;
+        padding: 0;
+    }
+
+    .logo {
+        margin-left: 0;
+        text-align: center;  
+    }
+
+    .logo img {
+        width: 80px;  
+    }
+
+    .navegacion {
+        display: flex;
+        flex-direction: column;  
+        gap: 10px;
+        text-align: center;
+        margin-top: 20px; 
+    }
+
+    .navegacion ul {
+        display: flex;
+        flex-direction: column; /* Hace que los enlaces estén en una columna */
+        gap: 15px;  /* Añade espacio entre cada elemento del menú */
+    }
+
+    .navegacion li {
+        display: flex;  /* Alinea los elementos como columna */
+        justify-content: center;
+    }
+
+    /* Ajustes adicionales para Misión y Visión */
+    .mision-vision {
+        flex-direction: column;  /* Hace que los items de Misión y Visión se apilen verticalmente */
+        align-items: center;
+    }
+
+    .mision-vision .item {
+        width: 80%;  /* Aumenta el tamaño de los elementos de Misión y Visión en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+    
+
+    .footer {
+        flex-direction: column;  /* Pone los elementos del footer en una columna */
+        align-items: center;
+    }
+
+    footer article {
+        width: 80%;  /* Aumenta el tamaño de los artículos en el footer */
+        margin-bottom: 20px;
+    }
+
+    footer li{
+        font-size: 20px;
+    }
+
+    footer li a {
+        font-size: 25px;  /* Aumenta el tamaño de los enlaces en el footer */
+    }
+
+    .footer .contacto li{
+        svg{
+            height: vh;
+            width: auto;
+            padding-bottom: 3px;
+        }
+    }
+
+    .geolocalizacion iframe {
+        height: 250px; /* Ajustar la altura en pantallas pequeñas */
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .servicios .tarjeta {
+        width: 100%; 
+    }
+}
