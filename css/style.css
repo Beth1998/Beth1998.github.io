@@ -318,7 +318,7 @@ footer li a{
     height: 100%;
 }
 
-@media (max-width: 953px) {
+@media (max-width: 954px) {
 
     .nav {
         flex-direction: column;  
@@ -452,15 +452,4 @@ footer li a{
     #menu.show {
         display: flex; /* Cuando el botón se haga clic, se muestra el menú */
     }
-
-/* En pantallas grandes, se muestra el menú de forma normal */
-@media screen and (min-width: 954px) {
-    #menu {
-        display: flex; /* El menú es visible por defecto */
-    }
-
-    .hamburger {
-        display: none; /* Oculta el botón hamburguesa en pantallas grandes */
-    }
-}
 }
