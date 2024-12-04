@@ -90,8 +90,6 @@
 .hamburger span {
     width: 25px;
     height: 4px;
-    background-color:aqua;
-    color: white;
     border-radius: 5px;
 }
 
@@ -370,7 +368,7 @@ footer li a{
         display: block;
         width: 100%; /* Asegura que las barras ocupen todo el ancho del botón */
         height: 5px; /* Tamaño más grande de las barras */
-        background-color:aqua; /* Color de las barras */
+        background-color:rgb(10, 172, 172); /* Color de las barras */
         border-radius: 5px; /* Bordes redondeados */
         transition: all 0.3s; /* Animación suave */
     }
@@ -437,13 +435,28 @@ footer li a{
 
     .hamburger {
         display: flex; /* Muestra el botón hamburguesa */
-        width: 50px; /* Ajusta el tamaño del botón */
-        height: 40px; /* Ajusta el tamaño del botón */
+        width: 45px; /* Ajusta el tamaño del botón */
+        height: 35px; /* Ajusta el tamaño del botón */
         gap: 8px; /* Aumenta el espacio entre las barras */
+        cursor: pointer; /* Añade el cursor de puntero */
+        transition: transform 0.3s ease; /* Suaviza la animación de la transformación */
     }
+
+    .hamburger.open {
+        transform: rotate(90deg); /* Rota todo el contenedor 90 grados para alinear las barras */
+        transition: transform 0.3s ease; /* Transición suave */
+    }
+    
     .hamburger span {
         height: 8px; /* Aumenta el grosor de las barras */
+        background-color:rgb(3, 194, 194);
+        border-radius: 5px; /* Bordes redondeados */
+        width: 100%; /* Las barras ocupan todo el ancho */
+        transition: transform 0.3s ease; /* Añade la animación a las barras */
     }
+    
+
+     
 
     .hidden {
         display: none; /* Mantén la clase hidden para ocultar el menú */
