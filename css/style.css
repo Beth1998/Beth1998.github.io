@@ -8,15 +8,16 @@
 }
 
 .body {
-    background-image: url(/assets/img/fondo2.jpg);
+    background-image: url(/assets/img/fondo4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    /*background-color: beige;*/
 }
 
 .header {
-    background-color: #000000b7;
+    background-color: #5e2129d7;
     padding: 10px 0;
 }
 
@@ -76,7 +77,7 @@
 
 .navegacion li a:hover {
     color: white;
-    background-color: rgb(3, 194, 194);
+    background-color: #e30052;
     padding: 10px 20px; 
 }
 
@@ -118,7 +119,8 @@
     align-items: flex-start;
     margin-bottom: 30px;
     gap: 0 30px;
-    color: white;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .mision-vision .item {
@@ -126,7 +128,7 @@
     width: 50%;
     padding: 20px;
     gap: 20px;
-    background-color:#000000b7;
+    background-color:#5e2129d7;
     border-radius: 20px;
 }
 
@@ -140,7 +142,8 @@
 .mision-vision .item h2 {
     font-size: 30px;
     margin-bottom: 10px;
-    color: aqua;
+    color: #d1034e;
+    font-weight: bolder;
 }
 
 .mision-vision .item p {
@@ -151,7 +154,7 @@
 }
 
 .servicios {
-    background-color: #000000b7;
+    background-color: #5e2129d7;
     color: white;
     border-radius: 20px;
     padding: 20px;
@@ -169,9 +172,9 @@
 
 .servicios h2 {
     text-align: center;
-    font-size: 35px;
-    margin-bottom: 20px;
-    color: aqua;
+    font-size: 40px;
+    color: #d1034e; 
+    font-weight: bolder;
 }
 
 .servicios .contenedor-tarjetas {
@@ -184,8 +187,9 @@
 
 
 .servicios .tarjeta {
-    background-color: #1a1a1ab7;
+    background-color: #949393b9;
     color: white;
+    font-weight: bolder;
     width: 300px;
     border-radius: 15px;
     overflow: hidden;
@@ -209,21 +213,22 @@
 
 .servicios .tarjeta .titulo {
     font-size: 27px;
-    color: aqua;
+    color: #9b053c;
     margin-bottom: 10px;
     text-align: center;
+    font-weight: bold;
 }
 
 .servicios .tarjeta .descripcion {
     font-size: 20px;
-    color: white;
+    color: #5e2129;
     text-align:justify;
 }
 
 .footer {
     display: flex;
     justify-content:center;
-    background-color: #000000;
+    background-color: #5e2129;
     color: white;
     padding: 25px 5px 20px 5px;
     gap: 50px;
@@ -237,8 +242,9 @@ footer h3 {
     gap: 50px;
     font-size: 25px;
     margin-bottom: 10px;
-    color: aqua;
+    color: #d1034e;
     text-align: center;
+    font-weight: bolder;
 }
 
 footer ul {
@@ -290,7 +296,7 @@ footer li a{
 
 .footer a:hover{
     padding: 10px 1px 10px 1px;
-    background-color: rgb(3, 194, 194);
+    background-color: #e30052;
 }
 
 
@@ -320,7 +326,7 @@ footer li a{
 
 .geolocalizacion div:hover {
     border-radius: 30px;
-    box-shadow: 0 8px 10px rgba(0, 255, 255, 0.623);
+    box-shadow: 0 8px 10px #f00c58;
 }
 
 @media (max-width: 954px) {
@@ -369,15 +375,6 @@ footer li a{
         border: none; /* Sin borde */
         flex-direction: column; /* Asegura que las barras estén en columna */
         justify-content: space-between; /* Espacio entre las barras */
-    }
-
-    .hamburger span {
-        display: block;
-        width: 100%; /* Asegura que las barras ocupen todo el ancho del botón */
-        height: 5px; /* Tamaño más grande de las barras */
-        background-color:rgb(10, 172, 172); /* Color de las barras */
-        border-radius: 5px; /* Bordes redondeados */
-        transition: all 0.3s; /* Animación suave */
     }
 
     .mision-vision {
@@ -432,7 +429,7 @@ footer li a{
     
     .geolocalizacion div:hover {
         border-radius: 30px;
-        box-shadow: 0 8px 10px rgba(0, 255, 255, 0.623);
+        box-shadow: 0 8px 10px #f00c58;
     }
 }
 
@@ -471,7 +468,7 @@ footer li a{
     
     .hamburger span {
         height: 8px; /* Aumenta el grosor de las barras */
-        background-color:rgb(3, 194, 194);
+        background-color: #e30052;
         border-radius: 5px; /* Bordes redondeados */
         width: 100%; /* Las barras ocupan todo el ancho */
         transition: transform 0.3s ease; /* Añade la animación a las barras */
