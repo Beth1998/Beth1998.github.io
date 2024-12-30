@@ -8,7 +8,7 @@
 }
 
 .body {
-    background-image: url(/assets/img/fondo4.jpg);
+    background-image: url(/sitioWeb/img/fondo4.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,15 +108,20 @@
     margin-bottom: 20px;
 }
 
-.carousel-inner img {
+.carousel-inner {
     width: 100%;
-    height: auto;
+
+    img {
+    width: auto;
+    height: 100vh;
+    object-fit: contain;
+    }
 }
 
 .mision-vision {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 30px;
     gap: 0 30px;
     color: #ffffff;
@@ -125,8 +130,7 @@
 
 .mision-vision .item {
     text-align: center;
-    width: 50%;
-    padding: 20px;
+    padding: 3%;
     gap: 20px;
     background-color:#5e2129d7;
     border-radius: 20px;
@@ -153,59 +157,55 @@
     text-align: justify;
 }
 
-/* Contenedor principal de los servicios */
+#Servicios .contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5 columnas de igual tamaño */
+    gap: 8px; /* Espacio entre las tarjetas */
+}
+
+#Servicios .col-md-4 {
+    /* Puedes ajustar el ancho de cada tarjeta aquí si es necesario */
+    width: 100%;
+}
+
 .servicios {
     background-color: #5e2129d7;
     color: white;
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 30px;
-    width: 100%;
-    box-sizing: border-box;  /* Asegura que el padding no afecte el ancho total */
 }
 
-/* Contenedor de la sección de servicios */
 .servicios .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;    
     justify-content: center;
-    gap: 20px;
-    text-align: center;
-    width: 100%;
-    padding-left: 0;  /* Elimina el padding a la izquierda */
-    padding-right: 0; /* Elimina el padding a la derecha */
+    gap: 20px;              
+    text-align: center;   
 }
 
-/* Título de la sección */
 .servicios h2 {
     text-align: center;
     font-size: 40px;
-    color: #d1034e;
+    color: #d1034e; 
     font-weight: bolder;
 }
 
-/* Cuadrícula de tarjetas */
 .servicios .contenedor-tarjetas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
-    gap: 20px;  /* Espacio entre las tarjetas */
-    width: 100%;  /* Ocupa todo el ancho disponible */
-    padding-left: 0;  /* Elimina el padding a la izquierda */
-    padding-right: 0; /* Elimina el padding a la derecha */
-    justify-items: center;  /* Centra las tarjetas dentro de sus celdas */
-    box-sizing: border-box;  /* Asegura que los márgenes/paddings no afecten el ancho total */
+    display: flex;          
+    align-items: center;    
+    justify-content: center;
+    flex-wrap: wrap;        
+    gap: 50px;             
 }
 
-/* Estilo para cada tarjeta */
+
 .servicios .tarjeta {
     background-color: #949393b9;
     color: white;
     font-weight: bolder;
-    width: 100%;  /* Las tarjetas ocupan todo el ancho de la celda */
-    max-width: 300px;  /* Ancho máximo de la tarjeta (más ancha) */
-    min-width: 250px;  /* Ancho mínimo para que no se encojan demasiado */
-    height: 100%;  /* La tarjeta ocupa toda la altura de su celda */
+    width: 300px;
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -216,19 +216,16 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Imagen dentro de las tarjetas */
 .servicios .tarjeta img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-/* Contenido dentro de la tarjeta */
 .servicios .tarjeta .contenido {
     padding: 15px;
 }
 
-/* Título dentro de la tarjeta */
 .servicios .tarjeta .titulo {
     font-size: 27px;
     color: #9b053c;
@@ -237,13 +234,11 @@
     font-weight: bold;
 }
 
-/* Descripción dentro de la tarjeta */
 .servicios .tarjeta .descripcion {
     font-size: 20px;
     color: #5e2129;
-    text-align: justify;
+    text-align:justify;
 }
-
 
 .footer {
     display: flex;
@@ -294,20 +289,18 @@ footer li a{
     transition: background-color 0.5s;
     transition: padding 0.5s;
     border-radius: 100px;
-    gap: 0 10px;
+    gap: 0 15px;
 
-    svg{height: 6vh; width: auto;
+    svg{height: 5vh; min-width: 4vh;
     padding-bottom: 4px;}
 }
 
 
+
 .footer .contacto li{
-    justify-content: center;
-    align-items: center;
     display: flex;
-    gap: 0 10px;
-    svg{height: 5vh; width: auto;
-        padding-bottom: 4px;}
+    gap: 0 15px;
+    svg{height: 5vh; min-width: 4vh;}
 }
 
 .footer li a:hover {
@@ -407,6 +400,7 @@ footer li a{
         margin-bottom: 20px;
     }
     
+    
     .footer {
         flex-direction: column; 
         align-items: center;
@@ -427,8 +421,8 @@ footer li a{
 
     .footer .contacto li{
         svg{
-            height: vh;
-            width: auto;
+            height: 6vh;
+            min-width: 5vh;
             padding-bottom: 3px;
         }
     }
@@ -453,26 +447,16 @@ footer li a{
     }
 }
 
-@media (max-width: 1310px) {
-    .servicios .contenedor-tarjetas {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    }
-}
-
-@media (max-width: 1001px) {
-    .servicios .contenedor-tarjetas {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    }
-}
-
-@media (max-width: 620px) {
-    .servicios .contenedor-tarjetas {
-        grid-template-columns: 1fr; /* 1 columna */
+@media (max-width: 1337px) {
+    /* Para pantallas pequeñas (móviles), mostramos 2 tarjetas por fila */
+    #Servicios .contenedor-tarjetas {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 /* Ocultar los enlaces del menú y mostrar solo el botón hamburguesa en pantallas pequeñas */
 @media screen and (max-width: 954px) {
+
     #menu {
         display: none; /* El menú estará oculto por defecto */
         flex-direction: column; /* Asegura que los items se apilen verticalmente */
